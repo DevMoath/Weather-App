@@ -7,16 +7,21 @@ class UI {
         this.POSITION_UNAVAILABLE = document.getElementById('POSITION_UNAVAILABLE');
         this.TIMEOUT = document.getElementById('TIMEOUT');
         this.UNKNOWN_ERROR = document.getElementById('UNKNOWN_ERROR');
+        this.fahrenheit = 0;
+        this.celsius = 0;
     }
 
     change_unit() {
+        if(this.fahrenheit == 0) {
+            this.fahrenheit = this.temperature_degree.innerText;
+            this.celsius = Math.ceil((this.fahrenheit - 32) * 5 / 9);
+        }
+
         if(this.temperature_unit.innerText === 'C') {
-            let toFahrenheit = (this.temperature_degree.innerText * 9/5) + 32;
-            this.temperature_degree.innerText = parseInt(toFahrenheit, 10);
+            this.temperature_degree.innerText = this.fahrenheit;
             this.temperature_unit.innerText = 'F';
         } else {
-            let toCelsius = (this.temperature_degree.innerText - 32) * 5/9;
-            this.temperature_degree.innerText = parseInt(toCelsius, 10);
+            this.temperature_degree.innerText = this.celsius;
             this.temperature_unit.innerText = 'C';
         }
     }
@@ -27,7 +32,8 @@ class UI {
 
         const proxy = 'https://cors-anywhere.herokuapp.com/';
         let api_url;
-        if(window.location.href.includes('AR')) {
+        let href = window.location.href;
+        if(href.includes('ar') | href.includes('AR')) {
             api_url = `${proxy}https://api.darksky.net/forecast/d657d01c54738e0edde2c8d212bbf6fc/${latitude},${longitude}?lang=ar`;
         } else {
             api_url = `${proxy}https://api.darksky.net/forecast/d657d01c54738e0edde2c8d212bbf6fc/${latitude},${longitude}`;
