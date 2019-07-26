@@ -17,37 +17,35 @@
             font-size: 50px;
         }
         .bg-costume {
-            background: linear-gradient(to right bottom, #576574, #2f3640) no-repeat;
+            background: #2F3136;
         }
         ul, ol, li {
             margin: 5px;
         }
     </style>
 </head>
-<body>
+<body class="bg-costume">
 
-<div class="container-fluid bg-costume text-light vh-100">
+<div class="container-fluid text-light vh-100">
 
-    <div class="fixed-top">
-        <div class="dropdown dropleft float-right m-2 w-auto">
-            <button dir="ltr" type="button" class="btn btn-primary dropdown-toggle text-left" data-toggle="dropdown">
-                اللغة
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item disabled my-1" href="#">العربية</a>
-                <a class="dropdown-item my-1" href="../index.html">English</a>
-            </div>
+    <div dir="ltr" class="dropdown dropleft float-right mt-3 mb-1 mx-1">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            اللغة
+        </button>
+        <div class="dropdown-menu px-1 my-0">
+            <a class="dropdown-item disabled my-1" href="#">العربية</a>
+            <a class="dropdown-item my-1" href="../index.html">English</a>
         </div>
     </div>
 
-    <div class="row h-100 align-items-center text-light" id="page_loader">
+    <div class="row h-75 w-100 align-items-center text-light" id="page_loader">
         <div class="mx-auto">
             <div class="spinner-border my-4" style="width: 6rem; height: 6rem;" role="status"></div>
             <h5 class="font-weight-normal text-right">جاري التحميل ...</h5>
         </div>
     </div>
 
-    <div class="row h-100 w-100 align-items-center text-right d-none" id="PERMISSION_DENIED">
+    <div class="row h-100 w-100 align-items-center my-5 mx-auto text-right d-none" id="PERMISSION_DENIED">
         <div class="alert alert-danger w-auto mx-auto" role="alert">
             <h3 class="alert-heading">فشل!</h3>
             <h6>رفضت اذن الوصول لبيانات موقعك.</h6>
@@ -72,7 +70,7 @@
         </div>
     </div>
 
-    <div class="row h-100 w-100 align-items-center text-right d-none" id="POSITION_UNAVAILABLE">
+    <div class="row h-75 w-100 mx-auto align-items-center text-right d-none" id="POSITION_UNAVAILABLE">
         <div class="alert alert-danger w-auto mx-auto" role="alert">
             <h3 class="alert-heading">فشل!</h3>
             <hr>
@@ -81,7 +79,7 @@
         </div>
     </div>
 
-    <div class="row h-100 w-100 align-items-center text-right d-none" id="TIMEOUT">
+    <div class="row h-75 w-100 mx-auto align-items-center text-right d-none" id="TIMEOUT">
         <div class="alert alert-danger w-auto mx-auto" role="alert">
             <h3 class="alert-heading">فشل!</h3>
             <hr>
@@ -90,7 +88,7 @@
         </div>
     </div>
 
-    <div class="row h-100 w-100 align-items-center text-right d-none" id="UNKNOWN_ERROR">
+    <div class="row h-75 w-100 mx-auto align-items-center text-right d-none" id="UNKNOWN_ERROR">
         <div class="alert alert-danger w-auto mx-auto" role="alert">
             <h3 class="alert-heading">فشل!</h3>
             <hr>
@@ -99,7 +97,7 @@
         </div>
     </div>
 
-    <div class="row h-100 align-items-center d-none" id="page_content">
+    <div class="row h-75 w-100 mx-auto align-items-center d-none" id="page_content">
         <div class="col-sm-6 mx-auto">
             <div class="d-flex d-inline-flex w-100">
                 <h1 class="font-weight-normal my-auto mx-auto" id="city_name">Riyadh</h1>
@@ -118,7 +116,7 @@
         </div>
     </div>
 
-    <h5 class="fixed-bottom text-center py-3 m-0 font-weight-normal">
+    <h5 class="bg-dark fixed-bottom text-center py-3 m-0 font-weight-normal">
         تم تطويره من
         <a href="https://moath.cf/" target="_blank">معاذ</a> باستخدام
         <a href="https://darksky.net/dev" target="_blank">Dark Sky API</a></h5>
