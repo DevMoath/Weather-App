@@ -23,11 +23,11 @@
         }
     </style>
 </head>
-<body class="bg-costume">
+<body class="bg-costume pb-5">
 
-<div class="container-fluid text-light vh-100">
+<div class="container-fluid text-light">
 
-    <div class="dropdown dropleft float-right mt-3 mb-1 mx-1">
+    <div class="dropdown dropleft float-right my-4 mx-1">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
             Language
         </button>
@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div class="row h-100 w-100 align-items-center my-5 mx-auto d-none" id="PERMISSION_DENIED">
+    <div class="row w-100 my-5 mx-auto d-none" id="PERMISSION_DENIED">
         <div class="alert alert-danger w-auto mx-auto" role="alert">
             <h3 class="alert-heading">Failed!</h3>
             <h6>Permission Denied to access your location data.</h6>
@@ -65,7 +65,7 @@
                     <li>Go back to the browser and reload the page</li>
                 </ol>
             </ul>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">حاول مره اخرى!</button>
+            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try Again!</button>
         </div>
     </div>
 
@@ -96,7 +96,7 @@
         </div>
     </div>
 
-    <div class="row h-75 w-100 mx-auto align-items-center d-none" id="page_content">
+    <div class="row w-100 mx-auto my-4 d-none" id="page_content">
         <div class="col-sm-6 mx-auto">
             <div class="d-flex d-inline-flex w-100">
                 <h1 class="font-weight-normal my-auto mx-auto" id="city_name">Riyadh</h1>
@@ -104,7 +104,7 @@
             </div>
             <hr class="border-white">
             <button type="button" class="btn btn-outline-primary rounded-pill text-light btn-block font-weight-normal my-3 px-5 mx-auto w-auto"
-                    data-toggle="tooltip" data-placement="left" title="To Change Temperature Unit" id="change_unit_button">
+                    data-toggle="tooltip" data-placement="top" title="To Change Temperature Unit" id="change_unit_button">
                 <h1>
                     <span id="temperature_degree">37</span>
                     <span>&deg;</span>
