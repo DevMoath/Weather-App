@@ -14,11 +14,11 @@ Simple Weather app with dark-sky API
 * [Dark Sky API](https://darksky.net/dev)
 
 ## App Functions
-* You can know the weather temperature degree in your current location
-* You can change the temperature degree unit
+* Display the temperature degree in your current location
+* Change the temperature degree unit
 ![](assets/image/change_unit.gif)
 
-* You can change the language (Languages available: English, Arabic)
+* Change the language (English, Arabic)
 ![](assets/image/change_langauge.gif)
 
 ## Exceptions
