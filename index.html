@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Weather App</title>
     <meta name="description" content="Weather app with dark-sky API.">
-    <meta property="og:title" content="Weather App" />
-    <meta property="og:url" content="https://weather-app.cf/" />
+    <meta property="og:title" content="Weather App"/>
+    <meta property="og:url" content="https://weather-app.cf/"/>
     <meta property="og:description" content="Weather app with dark-sky API.">
     <meta property="og:image" content="assets/image/icon.png">
     <link rel="icon" href="assets/image/icon.png">
     <link rel="stylesheet" href="assets/bootstrap-4.3.1/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <script src="assets/bootstrap-4.3.1/jquery-3.4.1.min.js"></script>
     <script src="assets/bootstrap-4.3.1/popper.min.js"></script>
     <script src="assets/bootstrap-4.3.1/bootstrap.min.js"></script>
@@ -18,13 +19,13 @@
     <script src="assets/js/app.js"></script>
     <style>
         h1 {
-            font-size: 50px;
+            font-size : 50px;
         }
         .bg-costume {
-            background: #2F3136;
+            background : #2F3136;
         }
         ul, ol, li {
-            margin: 5px;
+            margin : 5px;
         }
     </style>
 </head>
@@ -70,7 +71,9 @@
                     <li>Go back to the browser and reload the page</li>
                 </ol>
             </ul>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try Again!</button>
+            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try
+                Again!
+            </button>
         </div>
     </div>
 
@@ -79,7 +82,9 @@
             <h3 class="alert-heading">Failed!</h3>
             <hr>
             <h5 class="font-weight-normal">Location information is unavailable. Please try again.</h5>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try Again!</button>
+            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try
+                Again!
+            </button>
         </div>
     </div>
 
@@ -87,8 +92,11 @@
         <div class="alert alert-danger w-auto mx-auto" role="alert">
             <h3 class="alert-heading">Failed!</h3>
             <hr>
-            <h5 class="font-weight-normal">The request to get user location take longer than expected. Please try again.</h5>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try Again!</button>
+            <h5 class="font-weight-normal">The request to get user location take longer than expected. Please try
+                again.</h5>
+            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try
+                Again!
+            </button>
         </div>
     </div>
 
@@ -97,7 +105,9 @@
             <h3 class="alert-heading">Failed!</h3>
             <hr>
             <h5 class="font-weight-normal">Unknown Error. Please try again.</h5>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try Again!</button>
+            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try
+                Again!
+            </button>
         </div>
     </div>
 
@@ -108,8 +118,10 @@
                 <canvas class="mx-auto" id="icon" width="128" height="128"></canvas>
             </div>
             <hr class="border-white">
-            <button type="button" class="btn btn-outline-primary rounded-pill text-light btn-block font-weight-normal my-3 px-5 mx-auto w-auto"
-                    data-toggle="tooltip" data-placement="top" title="To Change Temperature Unit" id="change_unit_button">
+            <button type="button"
+                    class="btn btn-outline-primary rounded-pill text-light btn-block font-weight-normal my-3 px-5 mx-auto w-auto"
+                    data-toggle="tooltip" data-placement="top" title="To Change Temperature Unit"
+                    id="change_unit_button">
                 <h1>
                     <span id="temperature_degree">37</span>
                     <span>&deg;</span>
@@ -119,8 +131,18 @@
             <h3 id="weather_summary" class="text-center font-weight-normal my-3">Sunny</h3>
         </div>
     </div>
-    <h5 class="bg-dark fixed-bottom text-center py-3 m-0 font-weight-normal">Made by <a href="https://moath.cf/" target="_blank">Moath</a> with <a
-            href="https://darksky.net/dev" target="_blank">Dark Sky API</a></h5>
+    <div class="fixed-bottom">
+        <div class="text-center mb-3">
+            <a href="https://twitter.com/Dev_Moath"
+               class="btn btn-lg rounded-pill text-light bg-primary animate action-button shadow-lg">
+                <i class="fab fa-twitter fa-fw"></i>
+            </a>
+            <a href="https://github.com/DevMoath"
+               class="btn btn-lg rounded-pill text-light bg-dark animate action-button shadow-lg ml-2">
+                <i class="fab fa-github fa-fw"></i>
+            </a>
+        </div>
+    </div>
 </div>
 
 </body>

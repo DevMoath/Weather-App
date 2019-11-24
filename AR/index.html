@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>برنامج الطقس</title>
     <meta name="description" content="برنامج الطقس مع dark-sky API.">
-    <meta property="og:title" content="برنامج الطقس" />
-    <meta property="og:url" content="https://weather-app.cf/" />
+    <meta property="og:title" content="برنامج الطقس"/>
+    <meta property="og:url" content="https://weather-app.cf/"/>
     <meta property="og:description" content="برنامج الطقس مع dark-sky API.">
     <meta property="og:image" content="../assets/image/icon.png">
     <link rel="icon" href="../assets/image/icon.png">
     <link rel="stylesheet" href="../assets/bootstrap-4.3.1/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
     <script src="../assets/bootstrap-4.3.1/jquery-3.4.1.min.js"></script>
     <script src="../assets/bootstrap-4.3.1/popper.min.js"></script>
     <script src="../assets/bootstrap-4.3.1/bootstrap.min.js"></script>
@@ -19,13 +20,13 @@
     <script src="../assets/js/app.js"></script>
     <style>
         h1 {
-            font-size: 50px;
+            font-size : 50px;
         }
         .bg-costume {
-            background: #2F3136;
+            background : #2F3136;
         }
         ul, ol, li {
-            margin: 5px;
+            margin : 5px;
         }
     </style>
 </head>
@@ -71,7 +72,9 @@
                     <li>ارجع للمتصفح واعد تحميل الصفحه</li>
                 </ol>
             </ul>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-left" onclick="location.reload();">حاول مره اخرى!</button>
+            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-left" onclick="location.reload();">حاول
+                مره اخرى!
+            </button>
         </div>
     </div>
 
@@ -80,7 +83,9 @@
             <h3 class="alert-heading">فشل!</h3>
             <hr>
             <h5 class="font-weight-normal">معلومات الموقع غير متوفرة، حاول مره اخرى.</h5>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-left" onclick="location.reload();">حاول مره اخرى!</button>
+            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-left" onclick="location.reload();">حاول
+                مره اخرى!
+            </button>
         </div>
     </div>
 
@@ -89,7 +94,9 @@
             <h3 class="alert-heading">فشل!</h3>
             <hr>
             <h5 class="font-weight-normal">طلب الحصول على بيانات المستخدم اخذ وقت اكثر من المتوقع، حاول مره اخرى.</h5>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-left" onclick="location.reload();">حاول مره اخرى!</button>
+            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-left" onclick="location.reload();">حاول
+                مره اخرى!
+            </button>
         </div>
     </div>
 
@@ -98,7 +105,9 @@
             <h3 class="alert-heading">فشل!</h3>
             <hr>
             <h5 class="font-weight-normal">خطأ غير معروف، حاول مره اخرى</h5>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-left" onclick="location.reload();">حاول مره اخرى!</button>
+            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-left" onclick="location.reload();">حاول
+                مره اخرى!
+            </button>
         </div>
     </div>
 
@@ -109,7 +118,8 @@
                 <canvas class="mx-auto" id="icon" width="128" height="128"></canvas>
             </div>
             <hr class="border-white">
-            <button type="button" class="btn btn-outline-primary rounded-pill text-light btn-block font-weight-normal my-3 px-5 mx-auto w-auto"
+            <button type="button"
+                    class="btn btn-outline-primary rounded-pill text-light btn-block font-weight-normal my-3 px-5 mx-auto w-auto"
                     data-toggle="tooltip" data-placement="top" title="لتغير وحدة درجة الحرارة" id="change_unit_button">
                 <h1 dir="ltr">
                     <span id="temperature_degree">37</span>
@@ -121,10 +131,19 @@
         </div>
     </div>
 
-    <h5 class="bg-dark fixed-bottom text-center py-3 m-0 font-weight-normal">
-        تم تطويره من
-        <a href="https://moath.cf/" target="_blank">معاذ</a> باستخدام
-        <a href="https://darksky.net/dev" target="_blank">Dark Sky API</a></h5>
+    <div class="fixed-bottom">
+        <div class="text-center mb-3">
+            <a href="https://twitter.com/Dev_Moath"
+               class="btn btn-lg rounded-pill text-light bg-primary animate action-button shadow-lg">
+                <i class="fab fa-twitter fa-fw"></i>
+            </a>
+            <a href="https://github.com/DevMoath"
+               class="btn btn-lg rounded-pill text-light bg-dark animate action-button shadow-lg ml-2">
+                <i class="fab fa-github fa-fw"></i>
+            </a>
+        </div>
+    </div>
+
 </div>
 
 </body>
