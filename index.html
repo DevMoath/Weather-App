@@ -1,157 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142122097-3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-142122097-3');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Weather App</title>
-    <meta name="description" content="Weather app with dark-sky API.">
-    <meta property="og:title" content="Weather App"/>
-    <meta property="og:url" content="https://weather-app.cf/"/>
-    <meta property="og:description" content="Weather app with dark-sky API.">
-    <meta property="og:image" content="assets/image/icon.png">
-    <link rel="icon" href="assets/image/icon.png">
-    <link rel="stylesheet" href="assets/bootstrap-4.3.1/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-    <script src="assets/bootstrap-4.3.1/jquery-3.4.1.min.js"></script>
-    <script src="assets/bootstrap-4.3.1/popper.min.js"></script>
-    <script src="assets/bootstrap-4.3.1/bootstrap.min.js"></script>
-    <script src="assets/js/skycons.js"></script>
-    <script src="assets/js/app.js"></script>
-    <style>
-        h1 {
-            font-size : 50px;
-        }
-        .bg-costume {
-            background : #2F3136;
-        }
-        ul, ol, li {
-            margin : 5px;
-        }
-    </style>
-</head>
-<body class="bg-costume pb-5">
-
-<div class="container-fluid text-light">
-
-    <div class="dropdown dropleft float-right my-4 mx-1">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            Language
-        </button>
-        <div class="dropdown-menu px-1 my-0">
-            <a class="dropdown-item disabled my-1" href="#">English</a>
-            <a class="dropdown-item my-1" href="AR/index.html">العربية</a>
-        </div>
-    </div>
-
-    <div class="row h-75 w-100 align-items-center text-light" id="page_loader">
-        <div class="mx-auto">
-            <div class="spinner-border my-5" style="width: 6rem; height: 6rem;" role="status"></div>
-            <h5 class="font-weight-normal">Loading ...</h5>
-        </div>
-    </div>
-
-    <div class="row w-100 my-5 mx-auto d-none" id="PERMISSION_DENIED">
-        <div class="alert alert-danger w-auto mx-auto" role="alert">
-            <h3 class="alert-heading">Failed!</h3>
-            <h6>Permission Denied to access your location data.</h6>
-            <hr>
-            <p class="mb-0 font-weight-bold text-dark">Follow the steps to allow access your location data: </p>
-            <ul class="text-dark">
-                <li>For Laptop/Desktop:</li>
-                <ol>
-                    <li>Click the lock button in the left side of URL</li>
-                    <li>Enable the location</li>
-                    <li>Reload the page</li>
-                </ol>
-                <li>For iOS/Android:</li>
-                <ol>
-                    <li>Go to the settings</li>
-                    <li>Go to your favorite browser</li>
-                    <li>Enable the location</li>
-                    <li>Go back to the browser and reload the page</li>
-                </ol>
-            </ul>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try
-                Again!
-            </button>
-        </div>
-    </div>
-
-    <div class="row h-75 w-100 mx-auto align-items-center d-none" id="POSITION_UNAVAILABLE">
-        <div class="alert alert-danger w-auto mx-auto" role="alert">
-            <h3 class="alert-heading">Failed!</h3>
-            <hr>
-            <h5 class="font-weight-normal">Location information is unavailable. Please try again.</h5>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try
-                Again!
-            </button>
-        </div>
-    </div>
-
-    <div class="row h-75 w-100 mx-auto align-items-center d-none" id="TIMEOUT">
-        <div class="alert alert-danger w-auto mx-auto" role="alert">
-            <h3 class="alert-heading">Failed!</h3>
-            <hr>
-            <h5 class="font-weight-normal">The request to get user location take longer than expected. Please try
-                again.</h5>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try
-                Again!
-            </button>
-        </div>
-    </div>
-
-    <div class="row h-75 w-100 mx-auto align-items-center d-none" id="UNKNOWN_ERROR">
-        <div class="alert alert-danger w-auto mx-auto" role="alert">
-            <h3 class="alert-heading">Failed!</h3>
-            <hr>
-            <h5 class="font-weight-normal">Unknown Error. Please try again.</h5>
-            <button type="button" class="btn btn-outline-primary mt-3 mb-1 float-right" onclick="location.reload();">Try
-                Again!
-            </button>
-        </div>
-    </div>
-
-    <div class="row w-100 mx-auto my-4 d-none" id="page_content">
-        <div class="col-sm-6 mx-auto">
-            <div class="d-flex d-inline-flex w-100">
-                <h1 class="font-weight-normal my-auto mx-auto" id="city_name">Riyadh</h1>
-                <canvas class="mx-auto" id="icon" width="128" height="128"></canvas>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142122097-3"></script>
+        <title>Weather App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="description" content="Weather app with dark-sky API.">
+        <meta property="og:title" content="Weather App"/>
+        <meta property="og:url" content="https://weather-app.cf/"/>
+        <meta property="og:description" content="Weather app with dark-sky API.">
+        <meta property="og:image" content="image/icon.png">
+        <link rel="icon" href="image/icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/skycons.js"></script>
+        <script src="js/moment-with-locales.min.js"></script>
+        <script src="js/moment-timezone-with-data.min.js"></script>
+        <script src="js/bootstrap3-typeahead.min.js"></script>
+        <script src="js/index.js" type="module" defer></script>
+    </head>
+    <body class="bg-page">
+        <!-- Page content -->
+        <div class="container-fluid text-light mb-5 pb-3 col-md-8">
+            <div class="alert alert-danger alert-dismissible fade" id="failed" role="alert">
+                <strong>Failed access your location</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <hr class="border-white">
-            <button type="button"
-                    class="btn btn-outline-primary rounded-pill text-light btn-block font-weight-normal my-3 px-5 mx-auto w-auto"
-                    data-toggle="tooltip" data-placement="top" title="To Change Temperature Unit"
-                    id="change_unit_button">
-                <h1>
-                    <span id="temperature_degree">37</span>
-                    <span>&deg;</span>
-                    <span id="temperature_unit">F</span>
-                </h1>
-            </button>
-            <h3 id="weather_summary" class="text-center font-weight-normal my-3">Sunny</h3>
+            <div class="my-3 mx-auto">
+                <div class="form-inline d-flex justify-content-center">
+                    <div class="form-group has-search">
+                        <input class="form-control rounded" type="text" autocomplete="oof" placeholder="Search for city..."
+                               id="q" readonly>
+                        <span class="form-control-feedback">
+                            <kbd class="bg-transparent text-muted border mr-1" id="search_hint">Press / to auto focus</kbd>
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <h5 class="text-center mb-3 text-dark font-weight-bold" id="city_name"></h5>
+            <div class="tab-content text-dark" id="tab_content">
+                <div class="d-flex justify-content-center align-items-center loader">
+                    <div class="lds-roller">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group list-group-horizontal py-2" id="list_tab" role="tablist"></div>
+            <hr>
+            <div class="tab-content">
+                <div class="d-flex justify-content-center align-items-center loader">
+                    <div class="lds-roller">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <ul class="list-group" id="list_days"></ul>
+            </div>
+            <div class="fixed-bottom d-flex justify-content-center bg-footer py-2">
+                <div class="my-auto">
+                    <a href="https://twitter.com/Dev_Moath" class="btn">
+                        <i class="fab fa-twitter fa-fw text-primary"></i>
+                    </a>
+                    <a href="https://github.com/DevMoath" class="btn">
+                        <i class="fab fa-github fa-fw text-light"></i>
+                    </a>
+                </div>
+                <!--                <div class="my-auto">-->
+                <!--                    <u><a href="" id="lang" class="text-primary"></a></u>-->
+                <!--                </div>-->
+            </div>
         </div>
-    </div>
-    <div class="fixed-bottom">
-        <div class="text-center mb-3">
-            <a href="https://twitter.com/Dev_Moath"
-               class="btn btn-lg rounded-pill text-light bg-primary animate action-button shadow-lg">
-                <i class="fab fa-twitter fa-fw"></i>
-            </a>
-            <a href="https://github.com/DevMoath"
-               class="btn btn-lg rounded-pill text-light bg-dark animate action-button shadow-lg ml-2">
-                <i class="fab fa-github fa-fw"></i>
-            </a>
-        </div>
-    </div>
-</div>
-
-</body>
+    </body>
 </html>
