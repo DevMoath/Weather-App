@@ -44,8 +44,8 @@ hr {
     color: #f8f9fa !important;
     background-color: #343a40 !important;
 }
-.list-group .active:focus {
-    color: #343a40 !important;
+.list-group .active:focus, .list-group .active:hover {
+    color: #fff !important;
 }
 ::-webkit-scrollbar {
     width: 0;
@@ -56,7 +56,7 @@ canvas {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10000;
-    opacity: .5;
+    opacity: .1;
 }
 .has-search .form-control-feedback {
     position: absolute;
