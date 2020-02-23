@@ -1,5 +1,5 @@
 # Weather App
-Weather App with Dark sky API to let you know the temperature degree.
+Discover the temperature degree with Dark sky API.
 
 ## Table of Content
 * [Technologies Used](#technologies-used)
