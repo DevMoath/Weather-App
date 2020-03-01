@@ -5,6 +5,7 @@ Discover the temperature degree with Dark sky API.
 * [Technologies Used](#technologies-used)
 * [App Functions](#app-functions)
 * [Exceptions](#exceptions)
+* [License](#license)
 
 ## Technologies Used
 * HTML
@@ -21,4 +22,7 @@ Discover the temperature degree with Dark sky API.
 * **PERMISSION_DENIED**: If the user disable the app from access his current location
 * **POSITION_UNAVAILABLE**: If the app couldn't find the user location
 * **TIMEOUT**: If the app wait for long time to get the request from the API  
-* **UNKNOWN_ERROR**: If any unhandled error occurs  
+* **UNKNOWN_ERROR**: If any unhandled error occurs
+
+## License
+The Weather App is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).  
